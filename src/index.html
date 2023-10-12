@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris</title>
+  </head>
+
+  <body>
+    <div id="game" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)">
+      <h4 id="game-over" style="
+      font-family: PerfectDOSVGA437;
+      height: 30px; 
+      padding-left: 180px;">Tetris</h4>
+      <div style=" display: flex; width: 480px;">
+        <div>
+          <table>
+            <tr>
+              <td id="start">Старт</td>
+              <td id="pause">Пауза</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td style="width: 115px;">Уровень</td>
+              <td id="level">0</td>
+            </tr>
+            <tr>
+              <td>Очков</td>
+              <td id="score">0</td>
+            </tr>
+          </table>
+          <div>
+            <div style="font-size: 15px; display: flex;
+            align-items: center;font-family: PerfectDOSVGA437">
+            <input type="checkbox" id="oneColor" style="
+            height: 20px;
+            width: 20px;">одноцветные фигуры</div>
+            <div style="font-size: 15px; display: flex;
+            align-items: center;font-family: PerfectDOSVGA437">
+            <input type="checkbox" id="hiddenKeys" style="
+            height: 20px;
+            width: 20px;">скрыть клавиши</div>
+            <div style="font-size: 15px; display: flex;
+            align-items: center;font-family: PerfectDOSVGA437;width: 200px; ">
+            <input type="checkbox" id="reload" style="
+            height: 20px;
+            width: 50px;">при первой загрузке страницы, нажмите на галочку</div>
+          </div>
+          <div id="next-tetro"></div>
+        </div>
+          <div class="main">
+        </div>
+      </div>
+      <style>
+        .control {  border-collapse: collapse; }
+      </style>
+      <div id="controlDiv" style="margin-top: 10px;">
+      <table class="control" style="margin-left: 200px">
+        <tr>
+          <td style="vertical-align: middle; visibility: hidden;"> </td>
+          <td style="vertical-align: middle; visibility: hidden;"> </td>
+          <td style="vertical-align: middle" id="rotate">↻</td>
+          <td style="vertical-align: middle; visibility: hidden;"> </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: middle" id="down3">↓↓↓</td>
+          <td style="vertical-align: middle" id="left">←</td>
+          <td style="vertical-align: middle" id="down">↓</td>
+          <td style="vertical-align: middle" id="right">→</td>
+        </tr>
+      </table>
+      </div>  
+    </div>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: PerfectDOSVGA437; /* Гарнитура шрифта */
+  src: url(../font/19888.ttf); /* Путь к файлу со шрифтом */
+ }
+
+.datas {
+  font-size: 24px;
+  text-align: center;
+}
+body::before {
+  content: '';
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0; right: 0; /* Вся ширин */
+  top: 0; bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  background: url(../img/fon-mario.jpg);
+  background-size: 80%;
+  filter: blur(4px);
+}
+body {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#game {
+  padding-top: 5px;
+  margin: 0px auto 0;
+  font-size: 40px;
+  width: auto;
+  text-align: center;
+}
+/*1,9375
+1.2
+*/
+.main {
+  width: 271px;
+  height: 520px;
+  margin: 0px auto 0;
+  border: 10px solid rgb(47, 47, 47);
+  background: rgba(219, 219, 219, 0.212);
+  font-size: 0;
+}
+
+.cell {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border: 0.1px solid rgba(158, 158, 158, 0.239);
+}
+
+.movingCell {
+  background: url(../img/block.png);
+}
+
+.failCell {
+  background: url(../img/failblock.png)
+}
+
+.fixedCell {
+  background: rgba(0, 0, 0, 0) url(../img/block.png);
+}
+.O {
+  background: url(../img/blockO.png);
+}
+
+.I {
+  background: url(../img/blockI.png);
+}
+
+.S {
+  background: url(../img/blockS.png);
+}
+.Z {
+  background: url(../img/blockZ.png);
+}
+.L {
+  background: url(../img/blockL.png);
+}
+
+/*.J {}
+.T {}*/
+
+#next-tetro {
+  font-size: 0;
+  height: 100px;
+  width: 100px;
+
+  margin-top: 15px;
+}
+
+
+#start {
+  text-align: center;
+  margin: 4px;
+  margin: 0px auto 0;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(0, 132, 255);
+  box-shadow: 0 -3px rgb(0, 17, 255) inset;
+  transition: 0.2s;
+  width: 82px;
+}
+#start:hover { background: rgb(110, 190, 255); }
+#start:active {
+  background: rgb(255, 255, 255);
+  color:black;
+  box-shadow: 0 3px rgb(41, 41, 41) inset;
+}
+#pause {
+  text-align: center;
+  margin: 4px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(0, 132, 255);
+  box-shadow: 0 -3px rgb(0, 17, 255) inset;
+  transition: 0.2s;
+  width: 82px;
+}
+#pause:hover { background: rgb(110, 190, 255); }
+#pause:active {
+  background: rgb(255, 255, 255);
+  color:black;
+  box-shadow: 0 3px rgb(41, 41, 41) inset;
+}
+
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif, serif;
+  font-size: 13px;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 5px;
+  }
+  th, td:first-child {
+  background: #AFCDE7;
+  color: white;
+  padding: 10px 20px;
+  }
+  th, td {
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: rgb(255, 251, 0);
+  }
+  td {
+  background: #D8E6F3;
+  text-align: center;
+  background: #AFCDE7;
+  color: white;
+  padding: 10px 20px;
+  transition: 0.2s;
+  }
+  td:active {
+    background: rgb(255, 255, 255);
+    color:black;
+    box-shadow: 0 3px rgb(41, 41, 41) inset;
+  }
+  th:first-child, td:first-child {
+  text-align: left;
+  }
+
+
+
